@@ -1,0 +1,150 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: #0f0f0f;
+    color: #f0f0f0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar {
+    background-color: #0f0f0f;
+    border-bottom: 1px solid #222;
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    color: #e25822 !important;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.nav-link { color: #f0f0f0 !important; margin-left: 1rem; }
+.nav-link:hover { color: #e25822 !important; }
+
+#about {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 60px;
+}
+
+.profile-photo {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #e25822;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #e25822;
+    margin-bottom: 1rem;
+}
+
+.bio {
+    color: #aaa;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.section-block { margin-bottom: 1.5rem; }
+.section-block h4 { color: #e25822; margin-bottom: 0.5rem; }
+
+.timeline-item {
+    border-left: 2px solid #333;
+    padding-left: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+.company { font-weight: bold; margin-right: 1rem; }
+.period { color: #888; font-size: 0.9rem; }
+.timeline-item p { color: #aaa; font-size: 0.9rem; margin-top: 0.2rem; }
+
+.tech-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.tag {
+    background: #1e1e1e;
+    border: 1px solid #e25822;
+    color: #e25822;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+}
+
+.btn-github {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.6rem 1.5rem;
+    background: #e25822;
+    color: #fff !important;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-github:hover { background: #c44a1a; }
+
+#shop {
+    min-height: 100vh;
+    padding: 100px 0;
+    background-color: #141414;
+}
+
+#shop h2 {
+    font-size: 2.5rem;
+    color: #e25822;
+    margin-bottom: 0.5rem;
+}
+
+.shop-subtitle { color: #888; font-size: 1.1rem; }
+
+/* Hobby Tabs */
+.hobby-tabs { border-bottom: 1px solid #333; margin-top: 1rem; }
+.hobby-tabs .nav-link {
+    color: #aaa !important;
+    background: none;
+    border: none;
+    padding: 0.5rem 1rem;
+}
+.hobby-tabs .nav-link.active {
+    color: #e25822 !important;
+    border-bottom: 2px solid #e25822;
+    background: none;
+}
+.hobby-tabs .nav-link:hover { color: #e25822 !important; }
+
+.hobby-content { padding-top: 1rem; }
+.hobby-desc { color: #aaa; margin-bottom: 1rem; font-style: italic; }
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+}
+.photo-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #222;
+    transition: transform 0.2s;
+}
+.photo-grid img:hover { transform: scale(1.02); }
+
+/* Footer */
+footer {
+    background-color: #0a0a0a;
+    border-top: 1px solid #222;
+    padding: 2rem 0;
+    text-align: center;
+    color: #555;
+}
+footer a { color: #e25822; text-decoration: none; }
+footer a:hover { text-decoration: underline; }
