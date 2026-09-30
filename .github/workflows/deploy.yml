@@ -21,6 +21,8 @@ jobs:
           # Key is stored base64-encoded (single line) to survive copy/paste
           echo "${{ secrets.DEPLOY_SSH_KEY }}" | base64 -d > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
+          # Fail fast with a clear message if the secret is truncated or malformed
+          ssh-keygen -lf ~/.ssh/deploy_key || { echo "::error::DEPLOY_SSH_KEY is not a valid key (decoded $(wc -c < ~/.ssh/deploy_key) bytes, expected about 400)"; exit 1; }
           echo "${{ secrets.VPS_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
 
       - name: Deploy with rsync
